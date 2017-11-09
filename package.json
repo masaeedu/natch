@@ -11,7 +11,7 @@
   ],
   "description": "Simple, explicit pattern matching",
   "version": "1.0.1",
-  "main": "index.js",
+  "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "build": "babel src --out-dir dist",
