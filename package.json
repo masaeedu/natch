@@ -10,7 +10,7 @@
     "pattern-matching"
   ],
   "description": "Simple, explicit pattern matching",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
