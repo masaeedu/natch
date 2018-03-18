@@ -49,8 +49,7 @@ const signInWords = match(
   Math.sign,
   [1, _ => "positive"],
   [-1, _ => "negative"],
-  [otherwise, _ => "zero"]
-)
+  [otherwise, _ => "zero"])
 
 console.log(signInWords(0)) // => "zero"
 ```
@@ -71,7 +70,8 @@ const thisThatOrTheOther = match(
     [false, _ => "that"],
     [true, _ => "other"])])
 
-console.log([10, -1, 5].map(thisThatOrTheOther)) // => "this", "that", "other"
+console.log(
+  [10, -1, 5].map(thisThatOrTheOther)) // => "this", "that", "other"
 ```
 
 Use this approach sparingly: every invocation of `match` results in the creation of a `Map` to hold the case handlers. In the example above, two `Map`s are created. Although the creation of the `Map`s is a one time cost, the lookup must be performed every time a value is applied to the function. For each of the input values `10`, `-1` and `5`, two discriminator projections are invoked and two lookups are performed to find the appropriate case handler in a `Map`.
